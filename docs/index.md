@@ -11,22 +11,24 @@ Modular, design-conscious color picker widget for JavaScript
 Work with colors in hex, RGB, HSV and HSL formats (plus kelvin temperatures!) in one simple, frictionless API.
 :::
 
-::: slot feature-colors-example 
-```js
-// Get the color as an RGB string 
-var rgb = colorPicker.color.rgbString; 
-// rgb = "{{ rgbString }}" 
+::: slot feature-colors-example
 
-// Get the color as a HSV object 
-var hsv = colorPicker.color.hsv; 
+```js
+// Get the color as an RGB string
+var rgb = colorPicker.color.rgbString;
+// rgb = "{{ rgbString }}"
+
+// Get the color as a HSV object
+var hsv = colorPicker.color.hsv;
 // hsv = {{ rgbString }}
 
-// Set the color from a hex string 
+// Set the color from a hex string
 colorPicker.color.hexString = "#fff";
 
-// Set the color from a temperature 
+// Set the color from a temperature
 colorPicker.color.kelvin = 6000;
 ```
+
 :::
 
 ::: slot feature-multicolor
@@ -38,22 +40,23 @@ Create the perfect color picker from a selection of pre-built UI components.
 :::
 
 ::: slot tutorial-iro-js
+
 ### Installation
 
 ##### Install from NPM
 
 ```bash
-$ npm install @jaames/iro --save
+$ npm install @rowlandshepard/iro --save
 ```
 
-Then if you are using a module bundler like Webpack or Rollup, import iro.js into your project: 
+Then if you are using a module bundler like Webpack or Rollup, import iro.js into your project:
 
 ```js
 // Using ES6 module syntax
-import iro from '@jaames/iro';
+import iro from "@rowlandshepard/iro";
 
 // Using CommonJS modules
-const iro = require('@jaames/iro');
+const iro = require("@rowlandshepard/iro");
 ```
 
 ##### Or use the jsDelivr CDN
@@ -61,17 +64,17 @@ const iro = require('@jaames/iro');
 Drop this script into the `<head>` of your page's HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/@rowlandshepard/iro@5"></script>
 ```
 
 When you manually include the library like this, iro.js will be made globally available on `window.iro`.
 
 ##### Or download and host yourself
 
-**[Development version](https://raw.githubusercontent.com/jaames/iro.js/master/dist/iro.js)**<br/>
+**[Development version](https://raw.githubusercontent.com/rowlandshepard/iro.js/master/dist/iro.js)**<br/>
 Uncompressed, with source comments included. Intended for debugging.
 
-**[Production version](https://raw.githubusercontent.com/jaames/iro.js/master/dist/iro.min.js)**<br/>
+**[Production version](https://raw.githubusercontent.com/rowlandshepard/iro.js/master/dist/iro.min.js)**<br/>
 Minified and optimized version.
 
 ### Color Picker Setup
@@ -85,7 +88,7 @@ First, we need a HTML element with a unique identifier (such as an `id` attribut
 Then use JavaScript to create a new `iro.ColorPicker` with a CSS selector that matches your chosen container element:
 
 ```js
-var colorPicker = new iro.ColorPicker('#picker');
+var colorPicker = new iro.ColorPicker("#picker");
 ```
 
 You can also use a DOM object instead of a CSS selector here -- this might be more suitable if you're integrating iro.js into an application built with a framework such as Vue, React, etc.
@@ -99,7 +102,7 @@ var colorPicker = new iro.ColorPicker("#picker", {
   // Set the size of the color picker
   width: 320,
   // Set the initial color to pure red
-  color: "#f00"
+  color: "#f00",
 });
 ```
 
@@ -107,8 +110,7 @@ A full list of color picker options can be found in the [options documentation](
 
 ### Working with Colors
 
-Each color picker has a color object which stores the currently selected color. 
-
+Each color picker has a color object which stores the currently selected color.
 
 ```js
 var hex = colorPicker.color.hexString;
@@ -126,7 +128,6 @@ A full list of color properties can be found in the [color documentation](/guide
 
 ### Events
 
-
 Events let you to run your own code after certain things have happened, like when the selected color has changed or when the user has interacted with the color picker.
 
 The color picker's [`on`](colorPicker_api.html#on) method can be used to attach functions that will be called whenever a particular event is fired. For example, we can add a listener that fires whenever the color is changed:
@@ -134,7 +135,7 @@ The color picker's [`on`](colorPicker_api.html#on) method can be used to attach 
 ```js
 // listen to a color picker's color:change event
 // color:change callbacks receive the current color
-colorPicker.on('color:change', function(color) {
+colorPicker.on("color:change", function (color) {
   // log the current color as a HEX string
   console.log(color.hexString);
 });

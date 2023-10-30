@@ -36,7 +36,7 @@ export class IroComponentWrapper extends Component<Props, State> {
 
     let rootProps = {
       onMouseDown: eventHandler,
-      // https://github.com/jaames/iro.js/issues/126
+      // https://github.com/rowlandshepard/iro.js/issues/126
       // https://github.com/preactjs/preact/issues/2113#issuecomment-553408767
       ontouchstart: eventHandler,
       // onTouchStart: eventHandler,

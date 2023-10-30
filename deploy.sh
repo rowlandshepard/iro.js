@@ -10,13 +10,13 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 # if you are deploying to a custom domain
-echo 'iro.js.org' > CNAME
+echo 'rowlandshepard.dev' > CNAME
 
 git init
 git add -A
-git commit -m 'deploy iro.js.org'
+git commit -m 'deploy rowlandshepard.dev'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:jaames/iro.js.git master:gh-pages
+git push -f git@github.com:rowlandshepard/iro.js.git master:gh-pages
 
 cd -

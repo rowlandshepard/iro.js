@@ -1,5 +1,5 @@
 {
-  "name": "@jaames/iro",
+  "name": "@rowlandshepard/iro",
   "version": "5.5.2",
   "description": "Modular, design-conscious color picker widget for JavaScript",
   "module": "dist/iro.es.js",
@@ -68,12 +68,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaames/iro.js.git"
+    "url": "git+https://github.com/rowlandshepard/iro.js.git"
   },
   "author": "James Daniel <irojs@jamesdaniel.dev>",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/jaames/iro.js/issues"
+    "url": "https://github.com/rowlandshepard/iro.js/issues"
   },
-  "homepage": "https://iro.js.org"
+  "homepage": "https://rowlandshepard.dev"
 }

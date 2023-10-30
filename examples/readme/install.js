@@ -1,5 +1,5 @@
 // Using ES6 module syntax
-import iro from '@jaames/iro';
+import iro from "@rowlandshepard/iro";
 
 // Using CommonJS modules
-const iro = require('@jaames/iro');
+const iro = require("@rowlandshepard/iro");
