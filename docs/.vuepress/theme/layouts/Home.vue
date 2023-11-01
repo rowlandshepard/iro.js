@@ -1,6 +1,6 @@
 <template>
   <main class="Home" aria-labelledby="main-title">
-    <a href="https://github.com/rowlandshepard/iro.js" class="GithubCorner" title="View on GitHub">
+    <a href="https://github.com/jaames/iro.js" class="GithubCorner" title="View on GitHub">
       <img svg-inline class="GithubCorner__svg" src="@icon/github-corner.svg" alt="GitHub Logo"/>
     </a>
     <div class="HomeLanguageSelect">
@@ -25,7 +25,7 @@
             <Content slot-key="introduction" rgbString="beans"/>
           </h2>
           <div class="ButtonGroup">
-            <a href="https://github.com/rowlandshepard/iro.js" class="Button">GitHub<span class="Button__starcount">★ {{ githubStarCount }}</span></a>
+            <a href="https://github.com/jaames/iro.js" class="Button">GitHub<span class="Button__starcount">★ {{ githubStarCount }}</span></a>
             <router-link class="Button" to="./guide.html">Get Started →</router-link>
           </div>
         </div>
@@ -189,7 +189,7 @@
         <h2 class="Section__title">Ecosystem</h2>
       </div>
       <div class="RepoGrid">
-        <GithubCard author="rowlandshepard" repo="iro.js">
+        <GithubCard author="jaames" repo="iro.js">
           The original standalone version of iro.js that works in any webpage.
         </GithubCard>
         <GithubCard author="irojs" repo="react-iro-color-picker">
@@ -227,7 +227,7 @@
           <a href="https://shipshape.io/" title="iro.js is sponsored by Ship Shape">
             <img svg-inline class="Sponsors__icon Sponsors__icon--shipshape" src="@icon/shipshape.svg" alt="Shipshape Logo"/>
           </a>
-          <a class="Sponsors__link" href="https://github.com/sponsors/rowlandshepard" title="Sponsor @rowlandshepard on Github">Become a sponsor →</a>
+          <a class="Sponsors__link" href="https://github.com/sponsors/jaames" title="Sponsor @jaames on Github">Become a sponsor →</a>
         </div>
       </div>
       <div class="Footer__column">
@@ -239,13 +239,13 @@
             <h6 class="Author__name">Built by <a href="https://jamesdaniel.dev" title="James Daniel">James Daniel</a></h6>
             <p class="Author__desc">Freelance web dev, designer and 3D artist from the North West of England.</p>
             <ul class="Author__linkGroup">
-              <a class="Author__link" href="https://github.com/rowlandshepard" title="@rowlandshepard on GitHub">
+              <a class="Author__link" href="https://github.com/jaames" title="@jaames on GitHub">
                 <img svg-inline class="Author__linkIcon" src="@icon/github-alt.svg" alt="GitHub icon"/>
               </a>
               <a class="Author__link" href="https://twitter.com/rakujira" title="@rakujira on Twitter">
                 <img svg-inline class="Author__linkIcon" src="@icon/twitter-alt.svg" alt="Twitter icon"/>
               </a>
-              <!-- <a class="Author__link" href="https://dribbble.com/rowlandshepard" title="@rowlandshepard on Dribbble">
+              <!-- <a class="Author__link" href="https://dribbble.com/jaames" title="@jaames on Dribbble">
                 <img svg-inline class="Author__linkIcon" src="@icon/dribbble.svg" alt="Dribbble icon"/>
               </a> -->
               <a class="Author__link" href="mailto:irojs@jamesdaniel.dev" title="Email me">
@@ -298,7 +298,7 @@ export default {
   },
   mounted() {
     // fetch star count from github
-    axios.get(`https://api.github.com/repos/rowlandshepard/iro.js`)
+    axios.get(`https://api.github.com/repos/jaames/iro.js`)
       .then(res => {
         this.githubStarCount = res.data['stargazers_count'];
       })

@@ -4,20 +4,20 @@ title: 开始使用
 
 ## 安装
 
-### 通过 NPM 安装
+### 通过NPM安装
 
 ```bash
-$ npm install @rowlandshepard/iro --save
+$ npm install @jaames/iro --save
 ```
 
-如果您使用的是 Webpack 或 Rollup 之类的模块捆绑器，请将 iro.js 导入您的项目中：
+如果您使用的是Webpack或Rollup之类的模块捆绑器，请将iro.js导入您的项目中：
 
 ```js
 //使用ES6模块语法
-import iro from "@rowlandshepard/iro";
+import iro from '@jaames/iro';
 
 //使用CommonJS模块
-const iro = require("@rowlandshepard/iro");
+const iro = require('@jaames/iro');
 ```
 
 ### 也可使用 CDN
@@ -25,20 +25,20 @@ const iro = require("@rowlandshepard/iro");
 将此脚本拖放到您页面的 HTML `<head>` 中：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@rowlandshepard/iro@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
 ```
 
-当您手动包含这样的库时，iro.js 将在 `window.iro` 上全局可用。
+当您手动包含这样的库时，iro.js将在 `window.iro` 上全局可用。
 
 ### 也可下载并自己托管
 
-**[开发版本](https://raw.githubusercontent.com/rowlandshepard/iro.js/master/dist/iro.js)**<br/>未压缩，包括源注释。 用于调试。
+**[开发版本](https://raw.githubusercontent.com/jaames/iro.js/master/dist/iro.js)**<br/>未压缩，包括源注释。 用于调试。
 
-**[生产版本](https://raw.githubusercontent.com/rowlandshepard/iro.js/master/dist/iro.min.js)**<br/>缩小和优化的版本。
+**[生产版本](https://raw.githubusercontent.com/jaames/iro.js/master/dist/iro.min.js)**<br/>缩小和优化的版本。
 
 ## 颜色选择器设置
 
-首先， 我们需要一个具有唯一标识符的 HTML 元素 (例如一个 `id` 属性) 作为颜色选择器的容器：
+首先， 我们需要一个具有唯一标识符的HTML元素 (例如一个 `id` 属性) 作为颜色选择器的容器：
 
 ```html
 <div id="picker"></div>
@@ -47,10 +47,10 @@ const iro = require("@rowlandshepard/iro");
 然后使用 JavaScript 创建一个新的 `iro.ColorPicker` 与您选择的容器元素匹配的 CSS 选择器：
 
 ```js
-var colorPicker = new iro.ColorPicker("#picker");
+var colorPicker = new iro.ColorPicker('#picker');
 ```
 
-您还可以在此处使用 DOM 对象而不是 CSS 选择器 -- 如果将 iro.js 集成到使用诸如 Vue，React 等框架构建的应用程序中，这可能更合适。
+您还可以在此处使用DOM对象而不是CSS选择器 -- 如果将iro.js集成到使用诸如Vue，React等框架构建的应用程序中，这可能更合适。
 
 ## 颜色选择器选项
 
@@ -61,34 +61,34 @@ var colorPicker = new iro.ColorPicker("#picker", {
   //设置颜色选择器的大小
   width: 320,
   //将初始颜色设置为纯红色
-  color: "#f00",
+  color: "#f00"
 });
 ```
 
 ### 可选选项
 
-| 选项              | 用途                                                                         | 默认值            |
-| :---------------- | :--------------------------------------------------------------------------- | :---------------- |
-| `width`           | 控件的总宽度。                                                               | `300`             |
-| `color`           | 初始颜色值。 这可以是任意 [支持的颜色格式](/color_api.html#支持的颜色格式)。 | `"#ffffff"`       |
-| `colors`          | 用于 [多颜色选择](/advanced.html#多颜色选择器) 的初始颜色值。                | null              |
-| `display`         | 颜色选择器根元素的 CSS 显示值。                                              | `"block"`         |
-| `id`              | 颜色选择器根元素的 HTML ID。                                                 | `null`            |
-| `layout`          | 用于自定义 [UI 组件布局](/advanced.html#自定义-UI-布局)。                    | `null`            |
-| `layoutDirection` | UI 组件堆叠方向； 垂直 `"vertical"` 或 水平 `"horizontal"`.                  | `"vertical"`      |
-| `padding`         | 在控制手柄周围填充。                                                         | `6`               |
-| `margin`          | 各个组件之间的间隙。                                                         | `12`              |
-| `borderWidth`     | 控制点边框的宽度。 设置为 `0` 表示无边框。                                   | `0`               |
-| `borderColor`     | 边框的颜色。 支持任何有效的 CSS 颜色。                                       | `"#ffffff"`       |
-| `handleRadius`    | 控制手柄的半径                                                               | `8`               |
-| `handleSvg`       | 自定义手柄 SVG，用于 [自定义手柄](/advanced.html#自定义手柄)。               | `null`            |
-| `handleProps`     | 自定义手柄属性，用于 [自定义手柄](/advanced.html#自定义手柄)。               | `{x:0, y:0}`      |
+| 选项                | 用途                                                     | 默认值               |
+|:----------------- |:------------------------------------------------------ |:----------------- |
+| `width`           | 控件的总宽度。                                                | `300`             |
+| `color`           | 初始颜色值。 这可以是任意 [支持的颜色格式](/color_api.html#支持的颜色格式)。      | `"#ffffff"`       |
+| `colors`          | 用于 [多颜色选择](/advanced.html#多颜色选择器) 的初始颜色值。              | null              |
+| `display`         | 颜色选择器根元素的 CSS 显示值。                                     | `"block"`         |
+| `id`              | 颜色选择器根元素的 HTML ID。                                     | `null`            |
+| `layout`          | 用于自定义 [UI 组件布局](/advanced.html#自定义-UI-布局)。             | `null`            |
+| `layoutDirection` | UI组件堆叠方向； 垂直 `"vertical"` 或 水平 `"horizontal"`.         | `"vertical"`      |
+| `padding`         | 在控制手柄周围填充。                                             | `6`               |
+| `margin`          | 各个组件之间的间隙。                                             | `12`              |
+| `borderWidth`     | 控制点边框的宽度。 设置为 `0` 表示无边框。                               | `0`               |
+| `borderColor`     | 边框的颜色。 支持任何有效的 CSS 颜色。                                 | `"#ffffff"`       |
+| `handleRadius`    | 控制手柄的半径                                                | `8`               |
+| `handleSvg`       | 自定义手柄SVG，用于 [自定义手柄](/advanced.html#自定义手柄)。             | `null`            |
+| `handleProps`     | 自定义手柄属性，用于 [自定义手柄](/advanced.html#自定义手柄)。              | `{x:0, y:0}`      |
 | `wheelLightness`  | 如果设置为 `false`, 当亮度降低时，颜色轮将不会变成黑色.                      | `true`            |
-| `wheelAngle`      | 色轮的色调渐变的起始角度，以度为单位。                                       | `0`               |
-| `wheelDirection`  | 颜色轮的色调渐变方向；可选 顺时针`"clockwise"` 或 逆时针`"anticlockwise"`。  | `"anticlockwise"` |
-| `sliderSize`      | 滑块控制大小。 默认情况下，这将自动计算。                                    | `undefined`       |
+| `wheelAngle`      | 色轮的色调渐变的起始角度，以度为单位。                                    | `0`               |
+| `wheelDirection`  | 颜色轮的色调渐变方向；可选 顺时针`"clockwise"` 或 逆时针`"anticlockwise"`。 | `"anticlockwise"` |
+| `sliderSize`      | 滑块控制大小。 默认情况下，这将自动计算。                                  | `undefined`       |
 
-更多关于颜色选择器选项、属性和方法的详细信息可以在 [颜色选择器 API 文档](/colorPicker_api.html) 中找到。
+更多关于颜色选择器选项、属性和方法的详细信息可以在 [颜色选择器API 文档](/colorPicker_api.html) 中找到。
 
 ## 使用颜色
 
@@ -105,7 +105,7 @@ var hex = colorPicker.color.hexString;
 console.log(hex); // hex = "#ff0000"
 ```
 
-或者从 Hsl 对象中设置选中的颜色：
+或者从Hsl 对象中设置选中的颜色：
 
 ```js
 colorPicker.color.hsl = { h: 180, s: 100, l: 50 };
@@ -114,8 +114,8 @@ colorPicker.color.hsl = { h: 180, s: 100, l: 50 };
 
 颜色对象具有涵盖所有最常见的 web 颜色格式 (HEX, RGB, HSL 和 HSV) 的属性，以及一些额外的属性：
 
-| 属性         | 示例格式                           |
-| :----------- | :--------------------------------- |
+| 属性           | 示例格式                               |
+|:------------ |:---------------------------------- |
 | `hexString`  | `"#ff0000"`                        |
 | `hex8String` | `"#ff0000ff"`                      |
 | `rgb`        | `{ r: 255, g: 0, b: 0 }`           |
@@ -137,7 +137,7 @@ colorPicker.color.hsl = { h: 180, s: 100, l: 50 };
 | `value`      | `0` - `100`                        |
 | `kelvin`     | `1000` - `40000`                   |
 
-有关颜色对象的更多详细信息，请查阅[颜色 API 文档](/color_api.html)。
+有关颜色对象的更多详细信息，请查阅[颜色API文档](/color_api.html)。
 
 ## 颜色选择事件
 
@@ -148,7 +148,7 @@ colorPicker.color.hsl = { h: 180, s: 100, l: 50 };
 ```js
 //收听颜色选择器的color:change事件
 //color:change回调接收当前颜色
-colorPicker.on("color:change", function (color) {
+colorPicker.on('color:change', function(color) {
   //将当前颜色记录为十六进制字符串
   console.log(color.hexString);
 });
@@ -158,7 +158,7 @@ colorPicker.on("color:change", function (color) {
 
 ```js
 //监听颜色选择器的color:init和color:change事件
-colorPicker.on(["color:init", "color:change"], function (color) {
+colorPicker.on(['color:init', 'color:change'], function(color) {
   //将当前颜色记录为十六进制字符串
   console.log(color.hexString);
 });
@@ -173,10 +173,10 @@ function onColorChange(color) {
 }
 
 //添加color:change侦听器
-colorPicker.on("color:change", onColorChange);
+colorPicker.on('color:change', onColorChange);
 
 //以后，如果我们要停止侦听color:change ...
-colorPicker.off("color:change", onColorChange);
+colorPicker.off('color:change', onColorChange);
 ```
 
 ### 可用事件
@@ -185,13 +185,13 @@ colorPicker.off("color:change", onColorChange);
 
 当选中的颜色发生变化时 -- 当用户与颜色选择器交互时触发， 或者当颜色由您自己的代码更新。 此事件的回调函数将接收两个值：
 
-- `color`: [目前选定的颜色](#使用颜色)
-- `changes`: 显示自上次事件触发以来哪些 HSV 频道已经改变的对象
+* `color`: [目前选定的颜色](#使用颜色)
+* `changes`: 显示自上次事件触发以来哪些HSV 频道已经改变的对象
 
 在回调中修改此事件的 `color` 对象是安全的。 如果你想限制范围或某个颜色通道, 例如:
 
 ```js
-colorPicker.on("color:change", function (color) {
+colorPicker.on('color:change', function(color) {
   //不允许颜色饱和度低于50!
   if (color.saturation < 50) {
     color.saturation = 50;

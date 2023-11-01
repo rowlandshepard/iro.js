@@ -26,7 +26,7 @@ $ npm run build
 
 ## Documentation site
 
-The iro.js documentation site ([rowlandshepard.dev](//rowlandshepard.dev)) is built with [vuepress](//vuepress.vuejs.org)
+The iro.js documentation site ([iro.js.org](//iro.js.org)) is built with [vuepress](//vuepress.vuejs.org)
 
 ### Install dependencies
 

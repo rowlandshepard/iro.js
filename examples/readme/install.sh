@@ -1,1 +1,1 @@
-npm install @rowlandshepard/iro --save
+npm install @jaames/iro --save
